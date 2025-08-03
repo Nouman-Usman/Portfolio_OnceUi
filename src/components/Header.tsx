@@ -16,18 +16,29 @@ type TimeDisplayProps = {
 
 const TimeDisplay: React.FC<TimeDisplayProps> = ({ timeZone, locale = "en-GB" }) => {
   const [currentTime, setCurrentTime] = useState("");
+  // Map known invalid time zones to valid ones
+  const getValidTimeZone = (tz: string) => {
+    if (tz === "Asia/Pakistan") return "Asia/Karachi";
+    return tz;
+  };
 
   useEffect(() => {
     const updateTime = () => {
       const now = new Date();
       const options: Intl.DateTimeFormatOptions = {
-        timeZone,
+        timeZone: getValidTimeZone(timeZone),
         hour: "2-digit",
         minute: "2-digit",
         second: "2-digit",
         hour12: false,
       };
-      const timeString = new Intl.DateTimeFormat(locale, options).format(now);
+      let timeString = "";
+      try {
+        timeString = new Intl.DateTimeFormat(locale, options).format(now);
+      } catch (e) {
+        // Fallback to local time if invalid timeZone
+        timeString = now.toLocaleTimeString(locale, { hour12: false });
+      }
       setCurrentTime(timeString);
     };
 

@@ -1,46 +1,38 @@
 import { Logo } from "@once-ui-system/core";
 
 const person = {
-  firstName: "Selene",
-  lastName: "Yu",
+  firstName: "Nouman",
+  lastName: "Usman",
   get name() {
     return `${this.firstName} ${this.lastName}`;
   },
-  role: "Design Engineer",
+  role: "AI Engineer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "noumanmughal0123@gmail.com",
+  location: "Asia/Pakistan", 
+  languages: ["English", "Urdu"], 
 };
 
 const newsletter = {
   display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
+  title: <>Subscribe to {person.firstName}'s AI Engineering Newsletter</>,
   description: (
     <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
+      I occasionally write about AI engineering, technology trends, and share insights on building intelligent systems and scalable AI solutions.
     </>
   ),
 };
 
 const social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
+    link: "https://github.com/Nouman-Usman",
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
+    link: "https://www.linkedin.com/in/nouman-usman/",
   },
   {
     name: "Email",
@@ -54,17 +46,19 @@ const home = {
   image: "/images/og/home.jpg",
   label: "Home",
   title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  description: `Portfolio website showcasing my work as an AI Engineer`,
+  headline: <>AI Engineer</>,
   featured: {
     display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
+    title: <>Recent project: <strong className="ml-4">AI LMS</strong></>,
     href: "/work/building-once-ui-a-customizable-design-system",
   },
   subline: (
     <>
-      I'm Selene, a design engineer at <Logo icon="/trademarks/wordmark-dark.svg" style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
+      I'm Nouman, an AI Engineer specializing in building intelligent workflows and scalable AI solutions.
+      <br />
+      <strong className="text-primary">Enhancing user interfaces</strong> and driving innovation through
+      <strong className="text-primary"> artificial intelligence</strong>.
     </>
   ),
 };
@@ -90,35 +84,30 @@ const about = {
     title: "Introduction",
     description: (
       <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        Nouman is a Pakistan-based AI Engineer passionate about building intelligent systems and scalable AI solutions. His work focuses on applying machine learning, deep learning, and automation to solve real-world problems and drive innovation in technology.
       </>
     ),
   },
   work: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Work Experience",
     experiences: [
       {
         company: "FLY",
         timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        role: "Senior AI Engineer",
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Developed and deployed machine learning models that improved product recommendations, increasing user engagement by 25%.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Led the integration of AI-driven analytics, enabling data-driven decision-making across teams.
           </>,
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
           {
             src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
+            alt: "AI Project",
             width: 16,
             height: 9,
           },
@@ -127,15 +116,13 @@ const about = {
       {
         company: "Creativ3",
         timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        role: "AI Engineer",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Built and maintained NLP pipelines for automated customer support, reducing response times by 40%.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Collaborated with cross-functional teams to launch AI-powered features, contributing to a 20% increase in customer satisfaction.
           </>,
         ],
         images: [],
@@ -143,50 +130,54 @@ const about = {
     ],
   },
   studies: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Studies",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "University of Engineering and Technology",
+        description: <>Studied Computer Science with a focus on artificial intelligence and data science.</>,
       },
       {
         name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        description: <>Completed courses in machine learning, deep learning, and AI product development.</>,
       },
     ],
   },
   technical: {
-    display: true, // set to false to hide this section
+    display: true,
     title: "Technical skills",
     skills: [
       {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
+        title: "Python & ML Frameworks",
+        description: <>Expert in Python, TensorFlow, PyTorch, and scikit-learn for building and deploying AI models.</>,
         images: [
           {
             src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
+            alt: "AI Model",
             width: 16,
             height: 9,
           },
         ],
       },
       {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
+        title: "Data Engineering",
+        description: <>Experience with data pipelines, ETL processes, and cloud platforms (AWS, GCP) for scalable AI solutions.</>,
+        images: [
+          {
+            src: "/images/projects/project-01/cover-03.jpg",
+            alt: "Data Engineering",
+            width: 16,
+            height: 9,
+          },
+        ],
+      },
+      {
+        title: "JavaScript & Next.js",
+        description: <>Building intelligent web apps with Next.js, Node.js, and integrating AI APIs.</>,
         images: [
           {
             src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
+            alt: "Web App",
             width: 16,
             height: 9,
           },
@@ -201,8 +192,6 @@ const blog = {
   label: "Blog",
   title: "Writing about design and tech...",
   description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
 };
 
 const work = {
