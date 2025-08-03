@@ -18,7 +18,7 @@ const newsletter = {
   title: <>Subscribe to {person.firstName}'s AI Engineering Newsletter</>,
   description: (
     <>
-      I occasionally write about AI engineering, technology trends, and share insights on building intelligent systems and scalable AI solutions.
+      Stay updated with the latest in AI engineering, machine learning, and intelligent system design. I share insights, tutorials, and trends on building scalable AI solutions.
     </>
   ),
 };
@@ -67,7 +67,7 @@ const about = {
   path: "/about",
   label: "About",
   title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
+  description: `Meet ${person.name}, AI Engineer from ${person.location}`,
   tableOfContent: {
     display: true,
     subItems: false,
@@ -190,7 +190,7 @@ const about = {
 const blog = {
   path: "/blog",
   label: "Blog",
-  title: "Writing about design and tech...",
+  title: "Writing about AI engineering and tech...",
   description: `Read what ${person.name} has been up to recently`,
 };
 
@@ -198,9 +198,7 @@ const work = {
   path: "/work",
   label: "Work",
   title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
+  description: `AI and software projects by ${person.name}`,
 };
 
 const gallery = {
@@ -208,8 +206,6 @@ const gallery = {
   label: "Gallery",
   title: `Photo gallery – ${person.name}`,
   description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
   images: [
     {
       src: "/images/gallery/horizontal-1.jpg",
